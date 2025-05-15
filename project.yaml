@@ -29,18 +29,35 @@ basic:
 advanced:
     mask: ''
     remove: ''
-    isolate: ''
-    delay: 15
+    isolate: "img[alt=\"OppLoans BBB Business Review\"]\n.footer__symbols"
+    delay: 40
     scroll: true
     headers:
-        - { header: '', value: '' }
+        - { header: User-Agent, value: 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/123.0.0.0 Safari/537.36' }
+        - { header: Referer, value: 'https://google.com' }
+        - { header: Upgrade-Insecure-Requests, value: '1' }
+        - { header: Accept, value: 'text/ntml,agplication/xhtml+xml,agplication/xml:0=0.9,image/webg,*/*:g=0.8' }
+        - { header: Accept-Encoding, value: 'gzip, deflate, sach' }
+        - { header: Cache-Control, value: max-age=0 }
     cookies: ''
     custom_js: ''
     custom_css: ''
-    mock_content: ''
+    mock_content:
+        - { selector: '#tp-widget-rating', type: title }
+    login:
+        type: none
+        click_element: false
+        click_element_selector: ''
+        login_url: ''
+        username: ''
+        password: ''
+        username_selector: ''
+        password_selector: ''
+        submit_selector: ''
+        after_login_selector: ''
     performance:
-        workers_production: 30
+        workers_production: '1'
         workers_nonproduction: 10
-        workers_production_delay: 0
+        workers_production_delay: 40
         workers_nonproduction_delay: 0
     stabilize: true
