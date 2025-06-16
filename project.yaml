@@ -4,10 +4,6 @@ basic:
         production: 'https://www.opploans.com'
         staging: ''
         development: ''
-    basicAuth:
-        production: { user: '', password: '' }
-        staging: { user: '', password: '' }
-        development: { user: '', password: '' }
     breakpoints:
         - 640
         - 1024
